@@ -152,6 +152,7 @@ function containerRows(val) {
   val++;
   let map = Data.map((each) => {
     const { id, name, rating, position, description, image } = each;
+    console.log(val, id);
     return `
       <div class="content ${id === val ? "show" : "noShow"}">
         <div class="rating-wrap">
@@ -221,7 +222,7 @@ const SEPARATING_ANGLE = 40; // `${40}deg`;
 // console.log(SEPARATING_ANGLE);
 for (let i = 0; i < carouselImage.length; i++) {
   let index = (i + dataIndex) % carouselImage.length;
-  console.log(index);
+  // console.log(index);
   let rotateValue =
     index * SEPARATING_ANGLE * -1 -
     carouselRotation +
@@ -230,7 +231,7 @@ for (let i = 0; i < carouselImage.length; i++) {
   carouselImage[i].style.transform = `rotate(${rotateValue}deg)`;
   imgRotationArr.push(rotateValue);
 }
-console.log(imgRotationArr);
+// console.log(imgRotationArr);
 
 // console.log(3 % 9);
 
@@ -260,13 +261,10 @@ function handleCarouselPrev() {
 
   carouselImage.forEach((img, i) => {
     console.log(imgRotationArr[i] - carouselRotation);
-      img.style.transform = `rotate(${imgRotationArr[i] - carouselRotation}deg)`;
-      // console.log(carouselImage);
-      // console.log(img);
-    });
-
-
-  console.log(imgRotation);
+    img.style.transform = `rotate(${imgRotationArr[i] - carouselRotation}deg)`;
+    // console.log(carouselImage);
+    // console.log(img);
+  });
 
   // 3.
   console.log(currentIndex);
@@ -355,11 +353,11 @@ function handleCarouselNext() {
 
   carouselImage.forEach((img, i) => {
     console.log(imgRotationArr[i] - carouselRotation);
-      img.style.transform = `rotate(${imgRotationArr[i] - carouselRotation}deg)`;
-    });
+    img.style.transform = `rotate(${imgRotationArr[i] - carouselRotation}deg)`;
+  });
 
   // 3.
-  console.log(currentIndex);
+  // console.log(currentIndex);
 
   if (mainImages[currentIndex].getAttribute("data-status") === "active") {
     // for previous
