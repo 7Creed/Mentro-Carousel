@@ -520,7 +520,7 @@ svg {
   section {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     /* display: flex; */
     display: grid;
     /* flex: 1 0 500px; */
@@ -535,7 +535,6 @@ svg {
   .left-side {
     position: relative;
     top: 0%;
-    background: blanchedalmond;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -552,7 +551,6 @@ svg {
   /* Image section */
   .right-side {
     position: relative;
-    background: blanchedalmond;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -637,12 +635,13 @@ svg {
 @media (max-width: 37.499em) {
   main {
     /* min-height: 100vh; */
+    
     overflow: visible;
   }
   section {
     position: relative;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     /* display: flex; */
     display: grid;
     /* flex: 1 0 500px; */
@@ -657,7 +656,6 @@ svg {
   .left-side {
     position: relative;
     top: -22%;
-    background: blanchedalmond;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -673,7 +671,6 @@ svg {
   /* Image section */
   .right-side {
     position: relative;
-    background: blanchedalmond;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
